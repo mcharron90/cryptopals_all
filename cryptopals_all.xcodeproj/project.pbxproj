@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		15496B1B20A78EB4009FED8D /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 15496B1A20A78EB4009FED8D /* main.c */; };
 		15496B2320A79158009FED8D /* base64.c in Sources */ = {isa = PBXBuildFile; fileRef = 15496B2220A79158009FED8D /* base64.c */; };
+		15496B2620A7D8A2009FED8D /* fixedXOR.c in Sources */ = {isa = PBXBuildFile; fileRef = 15496B2520A7D8A2009FED8D /* fixedXOR.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		15496B1A20A78EB4009FED8D /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		15496B2120A79158009FED8D /* base64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = base64.h; sourceTree = "<group>"; };
 		15496B2220A79158009FED8D /* base64.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = base64.c; sourceTree = "<group>"; };
+		15496B2420A7D8A2009FED8D /* fixedXOR.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fixedXOR.h; sourceTree = "<group>"; };
+		15496B2520A7D8A2009FED8D /* fixedXOR.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fixedXOR.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 				15496B1A20A78EB4009FED8D /* main.c */,
 				15496B2120A79158009FED8D /* base64.h */,
 				15496B2220A79158009FED8D /* base64.c */,
+				15496B2420A7D8A2009FED8D /* fixedXOR.h */,
+				15496B2520A7D8A2009FED8D /* fixedXOR.c */,
 			);
 			path = cryptopals_all;
 			sourceTree = "<group>";
@@ -124,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15496B2320A79158009FED8D /* base64.c in Sources */,
+				15496B2620A7D8A2009FED8D /* fixedXOR.c in Sources */,
 				15496B1B20A78EB4009FED8D /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
