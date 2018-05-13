@@ -10,6 +10,8 @@
 		15496B1B20A78EB4009FED8D /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 15496B1A20A78EB4009FED8D /* main.c */; };
 		15496B2320A79158009FED8D /* base64.c in Sources */ = {isa = PBXBuildFile; fileRef = 15496B2220A79158009FED8D /* base64.c */; };
 		15496B2620A7D8A2009FED8D /* fixedXOR.c in Sources */ = {isa = PBXBuildFile; fileRef = 15496B2520A7D8A2009FED8D /* fixedXOR.c */; };
+		15496B2920A7EBE3009FED8D /* xor_cypher.c in Sources */ = {isa = PBXBuildFile; fileRef = 15496B2820A7EBE3009FED8D /* xor_cypher.c */; };
+		15496B2C20A7EDE8009FED8D /* helperFunctions.c in Sources */ = {isa = PBXBuildFile; fileRef = 15496B2B20A7EDE8009FED8D /* helperFunctions.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +33,10 @@
 		15496B2220A79158009FED8D /* base64.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = base64.c; sourceTree = "<group>"; };
 		15496B2420A7D8A2009FED8D /* fixedXOR.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fixedXOR.h; sourceTree = "<group>"; };
 		15496B2520A7D8A2009FED8D /* fixedXOR.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fixedXOR.c; sourceTree = "<group>"; };
+		15496B2720A7EBE3009FED8D /* xor_cypher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = xor_cypher.h; sourceTree = "<group>"; };
+		15496B2820A7EBE3009FED8D /* xor_cypher.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = xor_cypher.c; sourceTree = "<group>"; };
+		15496B2A20A7EDE8009FED8D /* helperFunctions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = helperFunctions.h; sourceTree = "<group>"; };
+		15496B2B20A7EDE8009FED8D /* helperFunctions.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = helperFunctions.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,10 @@
 			isa = PBXGroup;
 			children = (
 				15496B1A20A78EB4009FED8D /* main.c */,
+				15496B2A20A7EDE8009FED8D /* helperFunctions.h */,
+				15496B2B20A7EDE8009FED8D /* helperFunctions.c */,
+				15496B2720A7EBE3009FED8D /* xor_cypher.h */,
+				15496B2820A7EBE3009FED8D /* xor_cypher.c */,
 				15496B2120A79158009FED8D /* base64.h */,
 				15496B2220A79158009FED8D /* base64.c */,
 				15496B2420A7D8A2009FED8D /* fixedXOR.h */,
@@ -128,6 +138,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15496B2C20A7EDE8009FED8D /* helperFunctions.c in Sources */,
+				15496B2920A7EBE3009FED8D /* xor_cypher.c in Sources */,
 				15496B2320A79158009FED8D /* base64.c in Sources */,
 				15496B2620A7D8A2009FED8D /* fixedXOR.c in Sources */,
 				15496B1B20A78EB4009FED8D /* main.c in Sources */,

@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include "base64.h"
 #include "fixedXOR.h"
+#include "xor_cypher.h"
 
 int main(int argc, const char * argv[]) {
     // insert code here...
@@ -33,14 +34,15 @@ int main(int argc, const char * argv[]) {
     char * out_xor = xor_two (xor1, xor2, 36);
     
     printf ("xor_two Out:");
-    for (int i=0; i < 36; i++)
-    {
-        printf ("%c",out_xor[i]);
-    }
+    printCharArray(out_xor, 36);
+//    for (int i=0; i < 36; i++)
+//    {
+//        printf ("%c",out_xor[i]);
+//    }
     printf ("\n\n");
     
     
-    
+    xor_cypher("1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736", 68);
     
     
     return 0;

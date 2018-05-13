@@ -42,16 +42,16 @@ char* xor_two (char* in1, char* in2, int length){
         
         outval = val1 ^ val2;
         
-        printf ("\ti:%d  outval:%d  ",i,outval);
+        //printf ("\ti:%d  outval:%d  ",i,outval);
 
         //convert outval to hex
         for (int j=i+1; j>=i; j--){
                 output [j] = encoding_table_hex [outval % 16];
-                printf ("%c", output[j]);
+//                printf ("%c", output[j]);
                 outval = (uint32_t) floor( outval / 16);
         }
         
-        printf ("\n");
+//        printf ("\n");
     }
     
     
