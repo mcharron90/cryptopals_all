@@ -7,6 +7,7 @@
 //
 
 #include "xor_cypher.h"
+char letterfreq [12] = "ULDRHSNIOATE";
 
 char* xor_cypher (char* in, int length){
     //Try to XOR with all characters from 'a' to 'z' first

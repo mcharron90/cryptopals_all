@@ -15,7 +15,7 @@
 #include "helperFunctions.h"
 
 char* xor_cypher (char* in, int length);
-char letterfreq [12] = "ULDRHSNIOATE";
+extern char letterfreq [12];
 //ETAOINSHRDLU
 
 #endif /* xor_cypher_h */
