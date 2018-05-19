@@ -10,5 +10,8 @@
 #define helperFunctions_h
 
 #include <stdio.h>
+#include <stdlib.h>
 void printCharArray (char* in, int len);
+uint8_t* convertToBytes (char* in1, int charLength, int* outLength);
+
 #endif /* helperFunctions_h */

@@ -12,7 +12,7 @@ char* xor_cypher (char* in, int length){
     //Try to XOR with all characters from 'a' to 'z' first
 //    char start = 'a';
     char* listOuts [256];
-    int scores [256];
+//    int scores [256];
     int outCount = 0;
     char letters[length];
     for (int i=0; i < 256; i++){

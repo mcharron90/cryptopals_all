@@ -14,3 +14,26 @@ void printCharArray (char* in, int len){
     }
     printf ("\n");
 }
+
+uint8_t* convertToBytes (char* in1, int charLength, int* outLength){
+    uint8_t val1=0;
+    int byteLength = charLength/2;
+    *outLength = byteLength;
+    uint8_t* byteArray = (uint8_t*) malloc (sizeof (uint8_t) * byteLength);
+    
+    
+    for (int i=0; i< charLength; i+=2){
+        for (int j=i; j<(i+2); j++){
+            if (in1[j] >= '0' && in1[j] <='9'){
+                val1 = (val1 << 4) + (in1[j]-'0');
+            } else if (in1[j] >='A' && in1[j] <='F'){
+                val1 = (val1 << 4) + (in1[j]-'A' + 10);
+            } else if (in1[j] >='a' && in1[j] <='f'){
+                val1 = (val1 << 4) + (in1[j]-'a' + 10);
+            }
+        }
+        byteArray[i/2] = val1;
+    }
+    return byteArray;
+    
+}
