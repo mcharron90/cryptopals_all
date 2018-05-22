@@ -15,6 +15,24 @@ void printCharArray (char* in, int len){
     printf ("\n");
 }
 
+void print_u8_array (uint8_t* in, int len){
+    //convert outval to hex
+    for (int i=0; i< len; i++){
+        uint8_t val = in[i];
+        char output[2];
+        for (int j=1; j>=0; j--){
+            output[j] = encoding_table_hex [val % 16];
+            val = (uint32_t) floor( val / 16);
+        }
+        for (int j=0; j<2; j++){
+            printf ("%c", output[j]);
+        }
+
+    }
+    printf ("\n");
+    
+}
+
 uint8_t* convertToBytes (char* in1, int charLength, int* outLength){
     uint8_t val1=0;
     int byteLength = charLength/2;

@@ -14,8 +14,6 @@
 #include <math.h>
 #include "helperFunctions.h"
 
-static char encoding_table_hex[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
-
-char* xor_two (char* in1, char* in2, int length);
+uint8_t* xor_two (char* in1, char* in2, int length, int * outLength);
 
 #endif /* fixedXOR_h */

@@ -32,18 +32,16 @@ int main(int argc, const char * argv[]) {
     char xor1 [] = "1c0111001f010100061a024b53535009181c";
     char xor2 [] = "686974207468652062756c6c277320657965";
 
-    char * out_xor = xor_two (xor1, xor2, 36);
+    int xorLength;
+    uint8_t * out_xor = xor_two (xor1, xor2, 36, &xorLength);
     
     printf ("xor_two Out:");
-    printCharArray(out_xor, 36);
-//    for (int i=0; i < 36; i++)
-//    {
-//        printf ("%c",out_xor[i]);
-//    }
+    print_u8_array(out_xor, xorLength); //36 chars, but 18 bytes
+
     printf ("\n\n");
     
     
-    //xor_cypher("1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736", 68);
+    xor_cypher("1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736", 68);
     
     
     return 0;

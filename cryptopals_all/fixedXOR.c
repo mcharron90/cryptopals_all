@@ -9,8 +9,8 @@
 #include "fixedXOR.h"
 
 
-char* xor_two (char* in1, char* in2, int length){
-    char* output;
+uint8_t* xor_two (char* in1, char* in2, int length, int * outLength){
+    uint8_t* output;
     
     if (length %2 !=0){
         return NULL; //Invalid length
@@ -18,32 +18,24 @@ char* xor_two (char* in1, char* in2, int length){
     if (in1 == NULL ||in2 == NULL){
         return NULL;
     }
-    output = malloc(sizeof(char)*length);
     
     //byte by byte XOR the inputs
-    int outLength;
-    uint8_t* arr1 = convertToBytes ( in1, length, &outLength);
-    uint8_t* arr2 = convertToBytes ( in2, length, &outLength);
+    int arrLength;
+    uint8_t* arr1 = convertToBytes ( in1, length, &arrLength);
+    uint8_t* arr2 = convertToBytes ( in2, length, &arrLength);
     
-    for (int i=0; i< outLength; i++){
-        uint8_t outval=0;
-        
-        outval = arr1[i] ^ arr2[i];
-        
-        //printf ("\ti:%d  outval:%d  ",i,outval);
+    output = malloc(sizeof(uint8_t) * arrLength);
 
-        //convert outval to hex
-        for (int j=i+1; j>=i; j--){
-                output [j] = encoding_table_hex [outval % 16];
-//                printf ("%c", output[j]);
-                outval = (uint32_t) floor( outval / 16);
-        }
-        
-//        printf ("\n");
+    for (int i=0; i< arrLength; i++){
+        output[i] = arr1[i] ^ arr2[i];
     }
     
+//    print_u8_array (output, arrLength);
     
     
+    *outLength = arrLength;
+    free (arr1);
+    free (arr2);
     
     return output;
 }

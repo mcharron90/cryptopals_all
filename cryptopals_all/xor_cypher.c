@@ -12,7 +12,7 @@ char letterfreq [12] = "ULDRHSNIOATE";
 char* xor_cypher (char* in, int length){
     //Try to XOR with all characters from 'a' to 'z' first
 //    char start = 'a';
-    char* listOuts [256];
+    uint8_t* listOuts [256];
 //    int scores [256];
     int outCount = 0;
     char letters[length];
@@ -28,8 +28,9 @@ char* xor_cypher (char* in, int length){
         printf ("letters:\n");
         printCharArray(letters, length);
         
-        listOuts[outCount] = xor_two (in, letters, length);
-        printCharArray(listOuts[outCount], length);
+        int xor_out;
+        listOuts[outCount] = xor_two (in, letters, length, &xor_out);
+        print_u8_array(listOuts[outCount], length);
         printf("\n");
         outCount ++;
         //Score each result
